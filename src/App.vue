@@ -20,6 +20,7 @@
     </div>
   </div>
   <router-view />
+  <footer>Link to Github: <a href='https://github.com/Tourtle21/creative-project-3'>Creative Project 3</a></footer>
 </div>
 </template>
 
@@ -60,7 +61,15 @@ body {
 #brand img {
   height: 200px;
 }
-
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+  background: #B84901;
+  color: white;
+}
 #side {
   display: flex;
   justify-content: flex-end;
