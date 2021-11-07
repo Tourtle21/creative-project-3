@@ -1,32 +1,85 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+<div id="app">
+  <div id="menu">
+    <div id="brand">
+      <router-link to="/">
+        <h1>Find a Rock</h1>
+      </router-link>
     </div>
-    <router-view />
+    <div id="side">
+      <router-link to="/browse">
+        <div class="menu-item browse">
+          <p>Search</p>
+        </div>
+      </router-link>
+      <router-link to="/cart">
+        <div class="menu-item">
+          <p>Add</p>
+        </div>
+      </router-link>
+    </div>
   </div>
+  <router-view />
+</div>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+* {
+  box-sizing: border-box;
 }
 
-#nav {
-  padding: 30px;
+body {
+  margin: 50px 100px;
+
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+#menu {
+  box-sizing: border-box;
+  display: flex;
+  background: #B84901;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+#menu a {
+  color: white;
+  text-decoration: none;
+}
+
+#brand {
+  display: flex;
+  justify-content: center;
+}
+#brand h1 {
+  text-decoration: none;
+  color: white;
+  border: none;
+}
+
+#brand img {
+  height: 200px;
+}
+
+#side {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#side img {
+  width: 50px;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item p {
+  margin: 0px;
+}
+
+.browse {
+  margin-right: 50px;
 }
 </style>
